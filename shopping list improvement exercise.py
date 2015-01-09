@@ -1,0 +1,15 @@
+#Lewis Travers
+#12/12/2014
+#shopping list improvement exercise
+
+shopping_list = []
+finished = False
+while finished == False:
+    shopping_item = input("Enter next item (-1 to end list): ")
+    if shopping_item == "-1":
+        finished = True
+    else:
+        shopping_list.append(shopping_item) #add new item to the list
+
+for index, shopping_list in enumerate(shopping_list):
+    print("item {0} is {1}".format(index+1, shopping_list))
