@@ -3,24 +3,24 @@
 #Bubble Sort
 
 
-unsorted_list = ["a", "d", "c", "e", "b", "f"]
+
+unsorted_list = ["a", "d", "c", "e", "b", "f", "h", "g"]
 
 def bubble_sort(unsorted_list):
     list_sorted = False
-    count = 0
-    count2 = 1
-    while list_sorted == False:
-        if unsorted_list[count] > unsorted_list[count2]:
-            temp = unsorted_list[count]
-            unsorted_list[count] = unsorted_list[count2]
-            unsorted_list[count2] = temp
+    length = len(unsorted_list) - 1
+    while not list_sorted:
+        list_sorted = True
+        for num in range(length):
+            if unsorted_list[num] > unsorted_list[num+1]:
+                list_sorted = False
+                unsorted_list[num], unsorted_list[num+1] = unsorted_list[num+1], unsorted_list[num]
+    return unsorted_list    
+       
 
-        count = count + 1
-        count2 = count2 + 1
-        if count = len(unsorted_list):
-            list_sorted = True
-            sorted_list = unsorted_list     
-    return sorted_list
 
 #main program
+
+sorted_list = bubble_sort(unsorted_list)
+print(sorted_list)
 
